@@ -6,15 +6,7 @@
 
 In the past few years, group-based sparse representation (GSR) has emerged as a powerful paradigm for image inverse problems by synergizing model-driven interpretability with nonlocal self-similarity priors. Nevertheless, its practical utility is hindered by computationally expensive iterative processes involving nonlocal patch grouping and aggregation. Deep learning (DL) methods can avoid this deficiency by using end-to-end training, but they often lack of model interpretability. To bridge this gap, we propose a novel deep group-based sparse representation framework, termed DeepGSR, which brings the GSR method and the DL approach together. DeepGSR not only circumvents the iterative bottlenecks of conventional GSR but also preserves its intrinsic local sparsity and nonlocal similarity constraints through a learnable parameterization. Specifically, the network is built on a GSR model that enhances both intrinsic local sparsity and nonlocal self-similarity within a unified learnable framework while incorporating the attention mechanism to model complex intra-group relationships, optimizing patch matching and aggregation. To replace the computationally expensive traditional SVD-based rank shrinkage, we introduce a learnable low-rank shrinkage module that integrates both group sparsity and low-rank constraints, offering enhanced interpretability and flexibility. To better exploit frequency-specific structures, the network incorporates a shifting wavelet-domain patch partitioning strategy, which separately models high- and low-frequency components to further enhance the sparsity of both global and local information. Extensive experiments demonstrate that DeepGSR, when applied as a plug-and-play module to various image inverse problems such as image denoising, single-image deraining, metal artifact reduction, sparse-view computed tomography reconstruction, and phase retrieval consistently delivers effective performance, validating the generality of the proposed framework.
 
-<img src="C:\Users\lz175\AppData\Roaming\Typora\typora-user-images\image-20250512165420811.png" alt="image-20250512165420811"  />
-
-
-
-## Contents
-
-[TOC]
-
-
+<img src="https://github.com/shibaoshun/DeepGSR/blob/main/figs/fig1.jpg" alt="image-20250512165420811"  />
 
 ## Installation
 
@@ -72,7 +64,7 @@ python test.py --noiseL 15
 
 ## Results
 
-![image-20250512164910204](C:\Users\lz175\AppData\Roaming\Typora\typora-user-images\image-20250512164910204.png)
+![image-20250512164910204](https://github.com/shibaoshun/DeepGSR/blob/main/figs/fig2.jpg)
 
 
 
